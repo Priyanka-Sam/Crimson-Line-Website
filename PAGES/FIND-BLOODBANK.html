@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html
+<head>
+<link href="../STYLE/HomeSheet.css" rel="stylesheet"  />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="../SCRIPT/MenuScript.js">
+</script>
+<title>FIND A BLOOD BANK</title>
+</head>
+
+<body style="z-index:1;">
+<div id="quote">
+<q>BLOOD IS MEANT TO CIRCUALTE<br>PASS IT AROUND</q>
+</div>
+<div id="logo">
+<img id ="logoimg" src="../RESOURCES/LOGO2.png" height="300" width="400" />
+</div>
+<br>
+
+<ul id="horzizontal">
+<li style="float:left"><a href="Home.html">HOME</a></li>
+<li style="float:left"><a href="SignUp.html">SIGN-UP</a></li>
+<li style="float:left"><a href="Login.html">LOG IN</a></li>
+<li style="float:left"><a href="About Us.html">ABOUT US</a></li>
+<li style="float:right"><a href="Home.html">CONTACT US</a></li>
+</ul>
+
+
+
+<div id="open">
+<h1 style="font-size:29px;color:rgb(255,255,255);"onclick="OpenNav()">&#9776;      &nbsp;&nbsp;&nbsp;MENU</h1>
+</div>
+
+
+
+<div id="MENU" class="vertical">
+<a href="javascript:void(0)"  class="close" onClick="CloseNav()">&times;</a>
+<a href="Home.html">HOME</a>
+<a href="FIND-BLOODBANK.html">FIND A BLOOD BANK</a>
+<a href="REQUEST BLOOD.html">DONATE BLOOD</a>
+<a href="searchreq.html">FIND A DONOR</a>
+<a href="Donation Guidelines.html">DONATION GUIDELINES</a>
+<a href="FIND-HOSPITAL.html">NEAREST HOSPITAL</a>
+<a>BLOOD-DONATION ACT</a>
+</div>
+
+
+
+
+
+
+<div id="main" style=" z-index:1">
+
+<h style="font-size:64px; font-family:'Segoe UI Symbol'; color:rgb(255,0,0); font:'Segoe UI Symbol'">FIND A BLOOD BANK</h><br><br>
+
+<p> T'is the age of internet, if you don't open up your internet and look for a blood bank near your location, do you even internet?</p>
+<p>
+Using Google MAP's API and with the help of our underpaid(seriously, we don't pay him, at all) developer, you can find the nearest blood bank to any location you enter,<br> or your location if you decide to trust us. You can, just saying.</p>
+
+<br>
+
+<div id="map" onMouseOver="focusMap()" onMouseOut="blurMap()"></div>
+    <script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 8
+        });
+		
+		var infoWindow;
+		infoWindow= new google.maps.InfoWindow;
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function(position) {
+            var pos = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+            };
+
+            infoWindow.setPosition(pos);
+            infoWindow.setContent('You are here.');
+            infoWindow.open(map);
+            map.setCenter(pos);
+          }, function() {
+            handleLocationError(true, infoWindow, map.getCenter());
+          });
+        } else {
+          handleLocationError(false, infoWindow, map.getCenter());
+        }
+      }
+
+      function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+        infoWindow.setPosition(pos);
+        infoWindow.setContent(browserHasGeolocation ?
+                              'Error: Enter your location manually.' :
+                              'Error: Your browser doesn\'t support geolocation.');
+        infoWindow.open(map);
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAF0EW-1_qEcK9-uYaQR9nBsSs_iwz75zM&callback=initMap"
+    async defer></script>
+
+</div>
+<p>Use the map above to find blood banks near the location you entered, or your location, if you chose to give your browser your location when it asked you to. Now you might notice there actually are no bloodbanks, which kinda makes this website a scam. But hear us out, it takes huge efforts to bookmark and upload all the blood bank locations in the country into a DB which is then fed to the Map, sadly we don't have the manpower to accomplish the task.</p>
+</div>
+
+
+</body>
+</html>

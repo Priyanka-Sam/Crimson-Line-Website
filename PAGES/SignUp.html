@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html
+<head>
+<link href="../STYLE/HomeSheet.css" rel="stylesheet"  />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="../SCRIPT/MenuScript.js">
+</script>
+<title>SIGN UP</title>
+</head>
+
+<body style="z-index:1;">
+
+
+<div id="quote">
+<q>BLOOD IS MEANT TO CIRCUALTE<br>PASS IT AROUND</q>
+</div>
+<div id="logo">
+<img id ="logoimg" src="../RESOURCES/LOGO2.png" height="300" width="400" />
+</div>
+<br>
+
+<ul id="horzizontal">
+<li style="float:left"><a href="Home.html">HOME</a></li>
+<li style="float:left"><a href="SignUp.html">SIGN-UP</a></li>
+<li style="float:left"><a href="Login.html">LOG IN</a></li>
+<li style="float:left"><a href="About Us.html">ABOUT US</a></li>
+<li style="float:right"><a href="CONTACT US.html">CONTACT US</a></li>
+</ul>
+
+
+
+<div id="open">
+<h1 style="font-size:29px;color:rgb(255,255,255);"onclick="OpenNav()">&#9776;      &nbsp;&nbsp;&nbsp;MENU</h1>
+</div>
+
+
+
+<div id="MENU" class="vertical">
+<a href="javascript:void(0)"  class="close" onClick="CloseNav()">&times;</a>
+<a href="Home.html">HOME</a>
+<a href="FIND-BLOODBANK.html">FIND A BLOOD BANK</a>
+<a href="REQUEST BLOOD.html">DONATE BLOOD</a>
+<a href="searchreq.html">FIND A DONOR</a>
+<a href="searchreq.html">DONATION GUIDELINES</a>
+<a href="FIND-HOSPITAL.html">NEAREST HOSPITAL</a>
+<a>BLOOD-DONATION ACT</a>
+</div>
+
+
+
+
+
+
+<div id="main" style=" z-index:1">
+<h style="font-size:64px; font-family:'Segoe UI Symbol'; color:rgb(255,0,0);">SIGN UP</h>
+<script javascript>
+		function formcheck() {
+  var fields = $(".ss-item-required")
+        .find("select, textarea, input").serializeArray();
+  
+  $.each(fields, function(i, field) {
+    if (!field.value)
+      alert(field.name + ' is required');
+   }); 
+  console.log(fields);
+}
+</script>
+<div id="quote" style="top: 270px; font-weight:bold; font-size:40px; left:800px; padding:0px 0px; width:600px">
+"Sign Up today and save lives by donating blood everyday! joking, don't do that, really, it's dangerous, you can't donate blood everyday, takes time to regenerate you know."
+</div>
+
+<div id="form">
+<form action="su.php" span class="required">
+	<label >Name</label><br>
+	<input type="text" id="textbox"  name="name"  required><br><br>
+	<label >Blood Group</label><br>
+	<input type="text" id="textbox" name="blood" required><br><br>
+	<label >Mobile</label><br>
+	<input type="Mobile" id="textbox" name="Mobile" required><br><br>
+	<label >E-Mail</label><br>
+	<input type="email" id="textbox" id="mail" name="email" required><br><br>
+	<label >Username</label><br>
+	<input type="Username" id="textbox" id="uname" name="Username" required><br><br>
+	<label >Password</label><br><br>
+	<input id="textbox"  type="Password" name="Password" required><br><br>
+	<input id="submit" id="but" type="submit" name="submit" Value="Submit" oneclick="formcheck()">
+	</form>
+    
+    <br>
+    <br>
+    Once you sign up, we will ask you to enter details such as your health records, your nearest registered blood bank etc. Blood donation requests, if made to you, will show up on your dashboard, please note only one request can be satisfied by you every 3 months(if it is whole blood) or one request per month( if it is partial). 
+    
+</div>
+</div>
+
+
+</body>
+</html>
