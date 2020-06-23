@@ -1,0 +1,335 @@
+@charset "utf-8";
+/* CSS Document */
+
+body
+{
+	background:url(../RESOURCES/dust_scratches.png);
+}
+#quote
+{
+	font-size:30px;
+	font-family:"Segoe UI Symbol";
+	font:"Segoe UI Symbol";
+	text-align:right;
+	width:400px;
+	position:absolute;
+	left:72%;
+	top:10%;
+	color:red;
+	font-style:italic;
+	padding: 5% 0%;
+	font-weight:100;
+}
+#logo
+{
+	padding-left:60px;
+	position:relative;
+	right:5%;
+	top:10%;
+	
+}
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+.vertical a
+{
+	display: block;
+    color: black;
+    text-align: left;
+    padding: 20px 24px;
+    text-decoration: none;
+	transition:0.3s;
+	position:relative;
+	top:150px;
+}
+.vertical a:not(.close)
+{
+	display: block;
+    color: black;
+    text-align: left;
+    padding: 20px 24px;
+    text-decoration: none;
+	transition:0.3s;
+	border-bottom: 1px solid #000000;
+	box-shadow:0px 0px 2px #000000;
+}
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+	}
+li a:hover
+{
+	background-color:rgb(0,0,0);
+}
+.vertical a:hover:not(.active)
+
+{
+	background-color:rgb(51,51,51);
+	color: white;
+}
+.vertical a:active
+{
+	background-color:rgb(255,0,0);
+	color:rgb(255,87,87);
+}
+
+.vertical
+{
+	list-style-type: none;
+    margin: 0;
+	width:0;
+	z-index: 3;
+    background-color:white;
+	position:fixed;
+    height: 100%;
+    overflow:hidden;
+	font-size:30px;
+	transition: ease-out 0.5s;
+	top:0%;
+	left:0%;
+	box-shadow:5px 0px 10px #000000;
+}
+.vertical .close
+{
+	position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#open
+{
+	cursor:pointer;	
+	background-color:rgb(255,87,87);
+	box-shadow:0px 0px 15px #000000;
+	position:fixed;
+	bottom: 5%;
+	left:85%;
+	margin:0;
+	z-index: 2;
+	padding:0px 5px;
+	width:200px;
+	text-align:center;
+	font-family:"Segoe UI Symbol";
+	opacity:0.9;
+	text-wrap:none;
+	}
+
+#main
+{
+	position:relative;
+	padding:50px;
+	font-size:30px;
+}
+#image
+{
+	position:relative;
+	box-shadow: 0px 0px 20px #666666, 0px 0px 30px #000000;
+	left:60%;
+	top:90%;
+	background-color: rgb(255,83,83);
+	color:rgb(255,255,255);
+	opacity:1;
+	width:500px;
+	height:450px;
+	transition:ease-out 1.5s;
+	z-index:1;
+	font-size:36px;
+	padding:30px 30px;
+	text-align:center;
+	border-radius:1%;
+	font-weight:1000;
+	font-family:"Segoe UI Symbol";
+
+	
+}
+#behindImage
+{
+	position:absolute;
+	left:992px;
+	top:1533px;
+	width:500px;
+	height:450px;
+	font-size:36px;
+	font-family:"Segoe UI Symbol";
+	background-color:rgb(51,51,51);
+	font-weight:1000;
+	padding:30px 30px;
+	text-align:center;
+	box-shadow: 0px 0px 20px #666666, 0px 0px 30px #000000;
+	border-radius:1%;
+}
+
+
+#hoverelement
+{
+	position:relative;
+	width:100%;
+	height:100px;
+	opacity:0;
+}
+
+#main2
+{
+	position:absolute;
+	bottom:10%;
+	width:100%;
+	height:0;
+	background-color:rgb(0,0,0);
+	
+	opacity:0;
+	transition:1s;
+}
+
+.card2
+{
+	display:block;
+	
+	height:200px;
+	width:300px;
+	box-shadow:0px 0px 10px #CCCCCC, 0px 0px 40px #000000;
+	transition:1s;
+	font-size:64px;
+	position:absolute;
+	font-family:"Segoe UI Symbol";
+	padding: 10px 40px;
+	color: white;
+	text-align:center;
+	border-radius:1%;
+}
+#banner
+{
+	opacity:0;
+	transition:2s;
+}
+#map
+{
+	position:relative;
+	left:100px;
+	width:1200px;
+	height:300px;
+	box-shadow:0px 0px 10px #CCCCCC, 0px 0px 40px #000000;
+	opacity:0.5;
+	transition: 1s;
+}
+#form
+{
+	
+	position:relative;
+	top: 50px;
+	font-weight:bold;
+	font-size:30px;
+}
+#textbox
+{	width: 400px;
+	height: 50px;
+	border: 2px solid rgb(153,153,153);
+	box-shadow: 0px 1px 3px #CCCCCC;
+	color:rgb(255,0,0);
+	font-family:"Segoe UI Symbol";
+	font-size:36px;
+	
+	
+}
+#textbox:hover
+{
+	box-shadow: 0px 1px 5px 2px #CCCCCC;
+}
+#textbox:active
+{
+	box-shadow: 0px 1px 7px 2px #CCCCCC;
+}
+	
+#submit
+{
+	border:none;
+	width:200px;
+	height:60px;
+	background-color:rgb(255,83,83);
+	color: white;
+	font-size:36px;
+	font-family:"Segoe UI Symbol";
+	box-shadow:0px 0px 5px 2px #999999;
+}
+
+.plates
+{
+	position:absolute;
+	left:710px;
+	height: 400px;
+	width: 500px;
+	background-color:rgb(102,102,102);
+	display:block;
+	transition: 2s;
+	transition-duration:2s;
+	display:block;
+	background-color:rgb(255,0,0);
+	color:rgb(255,255,255);
+	padding:10px;
+
+	
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+
+::-webkit-scrollbar-track {
+    background: rgb(204,204,204) ;
+	opacity:0.5; 
+}
+
+
+::-webkit-scrollbar-thumb {
+    background: rgb(255,0,0) ; 
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(255,83,83) ; 
+}
+
+#video
+{
+	position:absolute;
+	width:92vw;
+	height:600px;
+	box-shadow: 0px 0px 20px #666666, 0px 0px 30px #000000;
+	top: 2200px;
+}
+.card
+{	border-radius:3%;
+	position: absolute;
+	font-size:32px;
+	width: 400px;
+	height: 50px;
+	color:rgb(255,255,255);
+	font-family:"Segoe UI Symbol";
+	box-shadow: 0px 0px 20px #666666, 0px 0px 30px #000000;
+	transition:0.5s;
+	overflow:hidden;
+	padding: 0px;
+	margin: 0px;
+	background-color:rgb(255,128,128);
+	display:block;
+	text-align:center;
+	
+}
+	#healthrec
+{	background-color:rgb(204,204,204);
+	border:none;
+	text-align:center;
+	color: black;
+	overflow:hidden;
+	font-size:20px;
+	font-family:"Segoe UI Symbol";
+	box-shadow:0px 0px 5px 2px #999999;
+}
